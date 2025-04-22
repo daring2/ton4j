@@ -177,7 +177,7 @@ public class WalletV5 implements Contract {
 
     return Message.builder()
         .info(ExternalMessageInInfo.builder().dstAddr(getAddressIntStd()).build())
-        .init(getStateInit())
+//        .init(getStateInit())
         .body(CellBuilder.beginCell().storeCell(body).storeBytes(signature).endCell())
         .build();
   }
@@ -366,7 +366,7 @@ public class WalletV5 implements Contract {
                         //
                         // .value(CurrencyCollection.builder().coins(destination.getAmount()).build())
                         .build())
-                .init(getStateInit())
+//                .init(getStateInit())
                 .body(
                     (isNull(destination.getBody())
                             && StringUtils.isNotEmpty(destination.getComment()))
