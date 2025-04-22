@@ -446,6 +446,10 @@ public class Tonlib {
           if (response.contains("error")) {
             log.info(response);
 
+            if (response.contains("message rejected by account")) {
+              break outterloop; //TODO refactor
+            }
+
             if (++retry > receiveRetryTimes) {
               throw new Error(
                   "Error in tonlib.receive(), "
