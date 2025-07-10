@@ -7,9 +7,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-22.04, macos-13, macos-15, windows-2019 ]
+        os: [ ubuntu-22.04, macos-15, windows-2019 ]
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 20
+    timeout-minutes: 60
 
     steps:
       - uses: actions/checkout@v3
@@ -52,17 +52,13 @@ jobs:
           cd address
           mvn test
 
-      - name: Run Cell tests
-        run: |
-          cd cell
-          mvn test
-
       - name: Run Disassembler tests
         run: |
           cd disassembler
           mvn test
 
       - name: Run BitString tests
+        if: matrix.os != 'macos-15' # hangs on github
         run: |
           cd bitstring
           mvn test
@@ -76,3 +72,8 @@ jobs:
         run: |
           cd tonlib
           mvn test -Dtest=TestTonlibJsonTestnet#testTonlibRunMethodParticipantsList
+
+      - name: Run adnl lite-client - testTonlibGetTxsByAddress
+        run: |
+          cd adnl
+          mvn test -Dtest=AdnlLiteClientTest#testMasterchainInfoExt

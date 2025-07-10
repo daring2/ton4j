@@ -4,9 +4,9 @@
 [![Based on TON][ton-svg]][ton]
 ![GitHub last commit](https://img.shields.io/github/last-commit/neodiX42/ton4j)
 
-Java libraries for interacting with TON blockchain.
-Do not forget to place tonlibjson library to your project. Latest Tonlib libraries can be
-found [here](https://github.com/ton-blockchain/ton/actions).
+Java libraries and wrapper for interacting with TON blockchain.
+
+ton4j requires minimum Java 11.
 
 ## Maven [![Maven Central][maven-central-svg]][maven-central]
 
@@ -15,7 +15,7 @@ found [here](https://github.com/ton-blockchain/ton/actions).
 <dependency>
     <groupId>io.github.neodix42</groupId>
     <artifactId>smartcontract</artifactId>
-    <version>0.9.6</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -36,7 +36,7 @@ found [here](https://github.com/ton-blockchain/ton/actions).
 <dependency>
     <groupId>io.github.neodix42</groupId>
     <artifactId>ton4j</artifactId>
-    <version>0.9.6</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -81,7 +81,8 @@ You can use each submodule individually. Click the module below to get more deta
 * ✅ Send external message
 * ✅ Get block transactions
 * ✅ Deploy contracts and send external messages using Tonlib
-* ✅ Wallets - Simple (V1), V2, V3, V4 (plugins), V5, Lockup, ~~Highload~~/Highload-V3, DNS, Jetton, StableCoin, NFT,
+* ✅ Wallets - Simple (V1), V2, V3, V4 (plugins), V5, Lockup, ~~Highload~~/Highload-V3, Highload-V3S (Secp256k1), DNS,
+  Jetton, StableCoin, NFT,
   Payment-channels, ~~Multisig V1~~, Multisig V2
 * ✅ HashMap, HashMapE, PfxHashMap, PfxHashMapE, HashMapAug, HashMapAugE serialization / deserialization
 

@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.github.neodix42</groupId>
         <artifactId>top</artifactId>
-        <version>0.9.6</version>
+        <version>1.0.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -50,12 +50,10 @@
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
         </dependency>
-        <!--  recompiled from source with Java 8 -->
         <dependency>
-            <groupId>io.github.neodix42</groupId>
-            <artifactId>tweetnacljava</artifactId>
-            <version>0.9.6</version>
-            <scope>compile</scope>
+            <groupId>org.purejava</groupId>
+            <artifactId>tweetnacl-java</artifactId>
+            <version>1.1.2</version>
         </dependency>
         <!-- test -->
         <dependency>
